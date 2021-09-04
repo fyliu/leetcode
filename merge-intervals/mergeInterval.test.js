@@ -24,12 +24,31 @@ describe('Test suite', function() {
 
 mocha.run()
 
-
 const mergeIntervals = (input) => {
   let output = []
   for (let interval of input) {
-    output.push(interval)
+    let hasOverlap = false
+    for(let i = 0; i < output.length; i++) {
+      if(overlap(output[i], interval)) {
+        const newInterval = merge(output[i], interval)
+        replaceInterval(output, i, newInterval)
+        hasOverlap = true
+        break
+      }
+    }
+    if(!hasOverlap) output.push(interval)
   }
   return output
 }
 
+const overlap = (left, right) => {
+  return (left[0] < right[0] && left[1] > right[0])
+}
+
+const merge = (left, right) => {
+  return [left[0], right[1]]
+}
+
+const replaceInterval = (array, index, interval) => {
+  array.splice(index, 1, interval)
+}
