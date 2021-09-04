@@ -68,7 +68,7 @@ const merge= (input) => {
 }
 
 const overlap = (left, right) => {
-  return (left[0] < right[0] && left[1] >= right[0])
+  return (left[0] <= right[0] && left[1] >= right[0])
 }
 
 const mergeTwo = (left, right) => {
