@@ -26,6 +26,10 @@ mocha.run()
 
 
 const mergeIntervals = (input) => {
-  return input
+  let output = []
+  for (let interval of input) {
+    output.push(interval)
+  }
+  return output
 }
 
