@@ -15,6 +15,11 @@ describe('Test suite', function() {
     const output = [[1,3], [5,7]];
     assert.deepEqual(output, mergeIntervals(input))
   })
+  it('merges two overlapping intervals', () => {
+    const input = [[1,3], [2,4]]
+    const output = [[1,4]]
+    assert.deepEqual(output, mergeIntervals(input))
+  })
 })
 
 mocha.run()
