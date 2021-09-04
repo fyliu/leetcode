@@ -2,9 +2,9 @@ const Mocha = require('mocha');
 const assert = require('assert');
 const mocha = new Mocha();
 
-mocha.suite.emit('pre-require', this, 'solution', mocha)
+//mocha.suite.emit('pre-require', this, 'solution', mocha)
 
-describe('Test suite', function() {
+describe('Test suite', () => {
   it('works for one interval', () => {
     const input = [[1, 3]];
     const output = [[1, 3]];
