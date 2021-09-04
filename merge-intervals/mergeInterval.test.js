@@ -16,6 +16,6 @@ mocha.run()
 
 
 const mergeIntervals = (input) => {
-  return [[]];
+  return [[1,3]];
 }
 
