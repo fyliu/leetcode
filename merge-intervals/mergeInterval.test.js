@@ -21,6 +21,6 @@ mocha.run()
 
 
 const mergeIntervals = (input) => {
-  return [[1,3]];
+  return input
 }
 
