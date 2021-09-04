@@ -45,6 +45,11 @@ describe('Test suite', function() {
     const output = [[1,4]]
     assert.deepEqual(output, merge(input))
   })
+  it('merges inclusive intervals', () => {
+    const input = [[1,4], [2,3]]
+    const output = [[1,4]]
+    assert.deepEqual(output, merge(input))
+  })
 })
 
 mocha.run()
