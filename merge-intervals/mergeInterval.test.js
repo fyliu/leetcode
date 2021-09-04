@@ -35,6 +35,11 @@ describe('Test suite', function() {
     const output = [[1,5]]
     assert.deepEqual(output, mergeIntervals(input))
   })
+  it('solves unsorted intervals', () => {
+    const input = [[4,5], [1,4]]
+    const output = [[1,5]]
+    assert.deepEqual(output, mergeIntervals(input))
+  })
 })
 
 mocha.run()
