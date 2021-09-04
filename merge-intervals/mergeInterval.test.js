@@ -8,7 +8,7 @@ describe('Test suite', () => {
   it('works for one interval', () => {
     const input = [[1, 3]];
     const output = [[1, 3]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('works for two non-overlapping intervals', () => {
     const input = [
@@ -19,7 +19,7 @@ describe('Test suite', () => {
       [1, 3],
       [5, 7],
     ];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('merges two overlapping intervals', () => {
     const input = [
@@ -27,7 +27,7 @@ describe('Test suite', () => {
       [2, 4],
     ];
     const output = [[1, 4]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('merges three overlapping intervals', () => {
     const input = [
@@ -36,7 +36,7 @@ describe('Test suite', () => {
       [3, 6],
     ];
     const output = [[1, 6]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('solves example 1', () => {
     const input = [
@@ -50,7 +50,7 @@ describe('Test suite', () => {
       [8, 10],
       [15, 18],
     ];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('solves example 2', () => {
     const input = [
@@ -58,7 +58,7 @@ describe('Test suite', () => {
       [4, 5],
     ];
     const output = [[1, 5]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('solves unsorted intervals', () => {
     const input = [
@@ -66,7 +66,7 @@ describe('Test suite', () => {
       [1, 4],
     ];
     const output = [[1, 5]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('merges same intervals', () => {
     const input = [
@@ -74,7 +74,7 @@ describe('Test suite', () => {
       [1, 4],
     ];
     const output = [[1, 4]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
   it('merges inclusive intervals', () => {
     const input = [
@@ -82,7 +82,7 @@ describe('Test suite', () => {
       [2, 3],
     ];
     const output = [[1, 4]];
-    assert.deepEqual(output, testFunction(input));
+    assert.deepStrictEqual(output, testFunction(input));
   });
 });
 
