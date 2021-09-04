@@ -20,6 +20,16 @@ describe('Test suite', function() {
     const output = [[1,4]]
     assert.deepEqual(output, mergeIntervals(input))
   })
+  it('merges three overlapping intervals', () => {
+    const input = [[1,3], [2,4], [3, 6]]
+    const output = [[1,6]]
+    assert.deepEqual(output, mergeIntervals(input))
+  })
+  it('solves example 1', () => {
+    const input = [[1,3], [2,6], [8, 10], [15,18]]
+    const output = [[1,6], [8,10], [15,18]]
+    assert.deepEqual(output, mergeIntervals(input))
+  })
 })
 
 mocha.run()
