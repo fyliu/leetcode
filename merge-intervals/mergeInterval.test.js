@@ -57,7 +57,7 @@ const mergeIntervals = (input) => {
 }
 
 const overlap = (left, right) => {
-  return (left[0] < right[0] && left[1] > right[0])
+  return (left[0] < right[0] && left[1] >= right[0])
 }
 
 const merge = (left, right) => {
