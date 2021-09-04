@@ -46,6 +46,7 @@ mocha.run()
 
 const mergeIntervals = (input) => {
   let output = []
+  input.sort((a, b) => (a[0] - b[0]))
   for (let interval of input) {
     let hasOverlap = false
     for(let i = 0; i < output.length; i++) {
