@@ -77,7 +77,7 @@ const overlap = (left, right) => {
 }
 
 const mergeTwo = (left, right) => {
-  return [left[0], right[1]]
+  return [Math.min(left[0], right[0]), Math.max(left[1], right[1])]
 }
 
 const replaceInterval = (array, index, interval) => {
