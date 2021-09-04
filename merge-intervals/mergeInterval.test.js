@@ -30,6 +30,11 @@ describe('Test suite', function() {
     const output = [[1,6], [8,10], [15,18]]
     assert.deepEqual(output, mergeIntervals(input))
   })
+  it('solves example 2', () => {
+    const input = [[1,4], [4,5]]
+    const output = [[1,5]]
+    assert.deepEqual(output, mergeIntervals(input))
+  })
 })
 
 mocha.run()
