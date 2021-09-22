@@ -9,7 +9,7 @@
   },
   "scripts": {
     "eslint": "eslint lib test",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "jest": {
     "testEnvironment": "node"
