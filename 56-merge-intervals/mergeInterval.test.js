@@ -2,12 +2,12 @@ const assert = require('assert');
 const testFunction = require('./mergeInterval')
 
 describe('Test suite', () => {
-  it.skip('works for one interval', () => {
+  it('works for one interval', () => {
     const input = [[1, 3]];
     const output = [[1, 3]];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('works for two non-overlapping intervals', () => {
+  it('works for two non-overlapping intervals', () => {
     const input = [
       [1, 3],
       [5, 7],
@@ -18,7 +18,7 @@ describe('Test suite', () => {
     ];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('merges two overlapping intervals', () => {
+  it('merges two overlapping intervals', () => {
     const input = [
       [1, 3],
       [2, 4],
@@ -26,7 +26,7 @@ describe('Test suite', () => {
     const output = [[1, 4]];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('merges three overlapping intervals', () => {
+  it('merges three overlapping intervals', () => {
     const input = [
       [1, 3],
       [2, 4],
@@ -35,7 +35,7 @@ describe('Test suite', () => {
     const output = [[1, 6]];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('solves example 1', () => {
+  it('solves example 1', () => {
     const input = [
       [1, 3],
       [2, 6],
@@ -49,7 +49,7 @@ describe('Test suite', () => {
     ];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('solves example 2', () => {
+  it('solves example 2', () => {
     const input = [
       [1, 4],
       [4, 5],
@@ -65,7 +65,7 @@ describe('Test suite', () => {
     const output = [[1, 5]];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('merges same intervals', () => {
+  it('merges same intervals', () => {
     const input = [
       [1, 4],
       [1, 4],
@@ -73,7 +73,7 @@ describe('Test suite', () => {
     const output = [[1, 4]];
     assert.deepStrictEqual(output, testFunction(input));
   });
-  it.skip('merges inclusive intervals', () => {
+  it('merges inclusive intervals', () => {
     const input = [
       [1, 4],
       [2, 3],
