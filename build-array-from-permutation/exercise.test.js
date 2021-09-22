@@ -12,7 +12,7 @@ describe('Test suite', () => {
     const output = [4,5,0,1,2,3];
     assert.deepStrictEqual(testFunction(input), output);
   });
-  it.only('example 3', () => {
+  it.skip('example 3', () => {
     const input = [3,2,1,0];
     const output = [0,1,2,3];
     assert.deepStrictEqual(testFunction(input), output);
