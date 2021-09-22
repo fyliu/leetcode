@@ -1,7 +1,7 @@
 var runningSum = function(nums) {
   let sums = []
-  for(let [i, val] of nums.entries()) {
-    sums[i] = (i === 0) ? val : sums[i-1] + val
+  for(let i = 0; i < nums.length; i++) {
+    sums[i] = (i === 0) ? nums[i] : sums[i-1] + nums[i]
   }
   return sums
 };
