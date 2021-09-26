@@ -1,14 +1,16 @@
 /**
- * @param {number[]} nums
- * @return {number[]}
+ * @param {number} num
+ * @return {number}
  */
-var decompressRLElist = function(nums) {
-  let result = []
-  for(let i = 0; i < nums.length; i += 2) {
-    const decompressed = Array(nums[i]).fill(nums[i+1])
-    result = result.concat(decompressed)
+var numberOfSteps = function(num) {
+  let steps = 0
+
+  while(num !== 0) {
+    num = (num % 2 === 0) ? num/2 : num - 1
+    steps++
   }
-  return result
+
+  return steps
 };
 
-module.exports = decompressRLElist
+module.exports = numberOfSteps
