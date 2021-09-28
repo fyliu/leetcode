@@ -6,6 +6,14 @@ const repeatI = (times) => {
   return string
 }
 
+const repeatX = (times) => {
+  let string = ""
+  for(let i = 0; i < times; i++) {
+    string += "X"
+  }
+  return string
+}
+
 /**
  * @param {number} num
  * @return {string}
@@ -20,7 +28,7 @@ var intToRoman = function(num) {
   } else if(num === 9) {
     return "IX"
   } else if(num < 20){
-    return "X" + intToRoman(num % 10)
+    return repeatX(Math.floor(num / 10)) + intToRoman(num % 10)
   } else {
     return "XX" + intToRoman(num % 10)
   }
