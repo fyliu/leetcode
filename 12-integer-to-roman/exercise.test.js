@@ -15,5 +15,6 @@ describe('Test suite', () => {
     test(6, "VI")
     test(7, "VII")
     test(8, "VIII")
+    test(9, "IX")
   });
 });
