@@ -1,11 +1,17 @@
+const repeatI = (times) => {
+  let string = ""
+  for(let i = 0; i < times; i++) {
+    string += "I"
+  }
+  return string
+}
+
 /**
  * @param {number} num
  * @return {string}
  */
 var intToRoman = function(num) {
-  if(num === 1) return "I"
-  if(num === 2) return "II"
-  else return "III"
+  return repeatI(num)
 };
 
 module.exports = intToRoman
