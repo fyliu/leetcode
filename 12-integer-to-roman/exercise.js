@@ -6,19 +6,25 @@ const repeatChar = (c, times) => {
   return string
 }
 
+const romanDigit = (digit) => {
+  if(digit < 4) {
+    return repeatChar("I", digit)
+  } else if(digit < 5) {
+    return "IV"
+  } else if(digit < 9) {
+    return "V" + intToRoman(digit - 5)
+  } else if(digit < 10) {
+    return "IX"
+  }
+}
+
 /**
  * @param {number} num
  * @return {string}
  */
 var intToRoman = function(num) {
-  if(num < 4) {
-    return repeatChar("I", num)
-  } else if(num < 5) {
-    return "IV"
-  } else if(num < 9) {
-    return "V" + intToRoman(num - 5)
-  } else if(num < 10) {
-    return "IX"
+  if(num < 10) {
+    return romanDigit(num)
 
   } else if(num < 40) {
     return repeatChar("X", Math.floor(num / 10)) + intToRoman(num % 10)
