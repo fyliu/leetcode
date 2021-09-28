@@ -30,7 +30,7 @@ var intToRoman = function(num) {
   } else if(num < 40){
     return repeatX(Math.floor(num / 10)) + intToRoman(num % 10)
   } else {
-    return "XX" + intToRoman(num % 10)
+    return "XL" + intToRoman(num % 10)
   }
 };
 
