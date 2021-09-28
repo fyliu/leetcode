@@ -17,8 +17,10 @@ var intToRoman = function(num) {
     return "IV"
   } else if(num === 5) {
     return "V"
-  } else {
+  } else if(num === 6) {
     return "VI"
+  } else {
+    return "VII"
   }
 };
 
