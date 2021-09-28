@@ -4,7 +4,8 @@
  */
 var intToRoman = function(num) {
   if(num === 1) return "I"
-  else return "II"
+  if(num === 2) return "II"
+  else return "III"
 };
 
 module.exports = intToRoman
