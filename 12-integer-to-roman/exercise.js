@@ -15,9 +15,10 @@ var intToRoman = function(num) {
     return repeatI(num)
   } else if(num === 4) {
     return "IV"
-  } else if(num >= 5) {
+  } else if(num >= 5 && num < 9) {
     return "V" + repeatI(num - 5)
-  }
+  } else
+    return "IX"
 };
 
 module.exports = intToRoman
