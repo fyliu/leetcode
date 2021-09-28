@@ -19,12 +19,8 @@ var intToRoman = function(num) {
     return "V" + repeatI(num - 5)
   } else if(num === 9) {
     return "IX"
-  } else if(num === 10) {
-    return "X"
-  } else if(num === 11) {
-    return "XI"
-  } else {
-    return "XII"
+  } else if(num >= 10) {
+    return "X" + repeatI(num - 10)
   }
 };
 
