@@ -22,7 +22,7 @@ var intToRoman = function(num) {
   } else if(num < 20){
     return "X" + intToRoman(num % 10)
   } else {
-    return "XX"
+    return "XX" + intToRoman(num % 10)
   }
 };
 
