@@ -15,7 +15,7 @@ var intToRoman = function(num) {
     return repeatChar("I", num)
   } else if(num === 4) {
     return "IV"
-  } else if(num >= 5 && num < 9) {
+  } else if(num < 9) {
     return "V" + intToRoman(num - 5)
   } else if(num === 9) {
     return "IX"
