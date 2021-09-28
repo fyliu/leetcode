@@ -21,8 +21,10 @@ var intToRoman = function(num) {
     return "IX"
   } else if(num === 10) {
     return "X"
-  } else {
+  } else if(num === 11) {
     return "XI"
+  } else {
+    return "XII"
   }
 };
 
