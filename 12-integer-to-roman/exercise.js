@@ -26,10 +26,12 @@ const romanDigit = (digit, romanOneFiveTen) => {
  * @return {string}
  */
 var intToRoman = function(num) {
-  return romanDigit(Math.floor(num / 1000), "M??")
-    + romanDigit(Math.floor((num % 1000) / 100), "CDM")
-    + romanDigit(Math.floor((num % 100) / 10), "XLC")
-    + romanDigit(num % 10, "IVX")
+  const romanDigits = "IVXLCDM??"
+
+  return romanDigit(Math.floor(num / 1000), romanDigits.substr(6, 9))
+    + romanDigit(Math.floor((num % 1000) / 100), romanDigits.substr(4, 7))
+    + romanDigit(Math.floor((num % 100) / 10), romanDigits.substr(2, 5))
+    + romanDigit(num % 10, romanDigits.substr(0, 3))
 };
 
 module.exports = intToRoman
