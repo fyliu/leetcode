@@ -37,5 +37,6 @@ describe('Test suite', () => {
     test(400, "CD")
     test(500, "D")
     test(600, "DC")
+    test(900, "CM")
   });
 });
