@@ -11,7 +11,11 @@ const repeatI = (times) => {
  * @return {string}
  */
 var intToRoman = function(num) {
-  return repeatI(num)
+  if(num < 4) {
+    return repeatI(num)
+  } else {
+    return "IV"
+  }
 };
 
 module.exports = intToRoman
