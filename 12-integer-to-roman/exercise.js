@@ -27,8 +27,10 @@ var intToRoman = function(num) {
     return "L" + intToRoman(num - 50)
   } else if(num < 100) {
     return "XC" + intToRoman(num - 90)
-  } else {
+  } else if(num < 400) {
     return repeatChar("C", Math.floor(num / 100)) + intToRoman(num % 100)
+  } else {
+    return "CD" + intToRoman(num - 400)
   }
 };
 
