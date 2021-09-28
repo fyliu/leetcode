@@ -10,11 +10,11 @@ const romanDigit = (digit, romanOneFiveTen) => {
   if(digit < 4) {
     return repeatChar(romanOneFiveTen[0], digit)
   } else if(digit < 5) {
-    return romanOneFiveTen[0]+romanOneFiveTen[1]
+    return romanOneFiveTen[0] + romanOneFiveTen[1]
   } else if(digit < 9) {
     return romanOneFiveTen[1] + romanDigit(digit - 5, romanOneFiveTen)
   } else if(digit < 10) {
-    return romanOneFiveTen[0]+romanOneFiveTen[2]
+    return romanOneFiveTen[0] + romanOneFiveTen[2]
   }
 }
 
