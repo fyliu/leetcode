@@ -33,8 +33,10 @@ var intToRoman = function(num) {
     return "CD" + intToRoman(num - 400)
   } else if(num < 900) {
     return "D" + intToRoman(num - 500)
-  } else {
+  } else if(num < 1000) {
     return "CM" + intToRoman(num - 900)
+  } else {
+    return "M" + intToRoman(num % 1000)
   }
 };
 
