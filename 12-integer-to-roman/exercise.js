@@ -13,8 +13,10 @@ const repeatI = (times) => {
 var intToRoman = function(num) {
   if(num < 4) {
     return repeatI(num)
-  } else {
+  } else if(num === 4) {
     return "IV"
+  } else {
+    return "V"
   }
 };
 
