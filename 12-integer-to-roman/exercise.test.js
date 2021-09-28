@@ -32,5 +32,6 @@ describe('Test suite', () => {
     test(60, "LX")
     test(80, "LXXX")
     test(90, "XC")
+    test(100, "C")
   });
 });
