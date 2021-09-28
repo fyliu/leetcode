@@ -27,11 +27,15 @@ const romanDigit = (digit, romanOneFiveTen) => {
  */
 var intToRoman = function(num) {
   const romanDigits = "IVXLCDM??"
+  let roman = ""
+  let digitStart = 0
 
-  return romanDigit(Math.floor(num / 1000), romanDigits.substr(6, 9))
-    + romanDigit(Math.floor((num % 1000) / 100), romanDigits.substr(4, 7))
-    + romanDigit(Math.floor((num % 100) / 10), romanDigits.substr(2, 5))
-    + romanDigit(num % 10, romanDigits.substr(0, 3))
+  while (num !== 0) {
+    roman = romanDigit(num % 10, romanDigits.substr(digitStart, digitStart+3)) + roman
+    num = Math.floor(num/10)
+    digitStart += 2
+  }
+  return roman
 };
 
 module.exports = intToRoman
