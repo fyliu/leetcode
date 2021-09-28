@@ -28,5 +28,6 @@ describe('Test suite', () => {
     test(29, "XXIX")
     test(30, "XXX")
     test(40, "XL")
+    test(50, "L")
   });
 });
