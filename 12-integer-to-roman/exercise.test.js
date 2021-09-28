@@ -40,5 +40,6 @@ describe('Test suite', () => {
     test(900, "CM")
     test(966, "CMLXVI")
     test(1000, "M")
+    test(1999, "MCMXCIX")
   });
 });
