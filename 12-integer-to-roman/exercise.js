@@ -1,16 +1,11 @@
 const repeatChar = (c, times) => {
-  let string = ""
-  for(let i = 0; i < times; i++) {
-    string += c
-  }
-  return string
+  return c.repeat(times)
 }
 
 const romanDigit = (digit, romanOneFiveTen) => {
   if(digit < 1) {
     return ""
-  }
-  if(digit < 4) {
+  } else if(digit < 4) {
     return repeatChar(romanOneFiveTen[0], digit)
   } else if(digit < 5) {
     return romanOneFiveTen[0] + romanOneFiveTen[1]
