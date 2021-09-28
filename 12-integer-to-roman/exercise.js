@@ -27,9 +27,9 @@ var intToRoman = function(num) {
     return "V" + repeatI(num - 5)
   } else if(num === 9) {
     return "IX"
-  } else if(num < 40){
+  } else if(num < 40) {
     return repeatX(Math.floor(num / 10)) + intToRoman(num % 10)
-  } else if(num < 50){
+  } else if(num < 50) {
     return "XL" + intToRoman(num % 10)
   } else if(num < 90) {
     return "L" + intToRoman(num - 50)
