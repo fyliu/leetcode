@@ -8,5 +8,6 @@ const test = (input, output) => {
 describe('Test suite', () => {
   it('test Roman', () => {
     test(1, "I")
+    test(2, "II")
   });
 });
