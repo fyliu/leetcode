@@ -36,7 +36,7 @@ var intToRoman = function(num) {
   } else if(num < 1000) {
     return "CM" + intToRoman(num - 900)
   } else {
-    return "M" + intToRoman(num % 1000)
+    return repeatChar("M", Math.floor(num / 1000)) + intToRoman(num % 1000)
   }
 };
 
