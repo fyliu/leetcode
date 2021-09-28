@@ -22,7 +22,7 @@ var intToRoman = function(num) {
   } else if(num >= 10 && num < 14) {
     return "X" + repeatI(num - 10)
   } else {
-    return "XIV"
+    return "X" + intToRoman(num % 10)
   }
 };
 
