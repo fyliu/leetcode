@@ -42,5 +42,6 @@ describe('Test suite', () => {
     test(1000, "M")
     test(1999, "MCMXCIX")
     test(1888, "MDCCCLXXXVIII")
+    test(2000, "MM")
   });
 });
