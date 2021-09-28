@@ -1,6 +1,6 @@
 const assert = require('assert');
 const testFunction = require('./exercise');
-const buildTree = require('./helpers')
+const buildTree = require('../helpers')
 
 describe('Test suite', () => {
   it('example 1', () => {
