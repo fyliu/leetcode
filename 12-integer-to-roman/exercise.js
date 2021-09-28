@@ -32,7 +32,7 @@ var intToRoman = function(num) {
   } else if(num < 50){
     return "XL" + intToRoman(num % 10)
   } else {
-    return "L" + intToRoman(num % 10)
+    return "L" + intToRoman(num - 50)
   }
 };
 
