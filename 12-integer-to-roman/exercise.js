@@ -13,12 +13,13 @@ const repeatChar = (c, times) => {
 var intToRoman = function(num) {
   if(num < 4) {
     return repeatChar("I", num)
-  } else if(num === 4) {
+  } else if(num < 5) {
     return "IV"
   } else if(num < 9) {
     return "V" + intToRoman(num - 5)
-  } else if(num === 9) {
+  } else if(num < 10) {
     return "IX"
+
   } else if(num < 40) {
     return repeatChar("X", Math.floor(num / 10)) + intToRoman(num % 10)
   } else if(num < 50) {
@@ -27,6 +28,7 @@ var intToRoman = function(num) {
     return "L" + intToRoman(num - 50)
   } else if(num < 100) {
     return "XC" + intToRoman(num - 90)
+
   } else if(num < 400) {
     return repeatChar("C", Math.floor(num / 100)) + intToRoman(num % 100)
   } else if(num < 500) {
@@ -35,6 +37,7 @@ var intToRoman = function(num) {
     return "D" + intToRoman(num - 500)
   } else if(num < 1000) {
     return "CM" + intToRoman(num - 900)
+
   } else {
     return repeatChar("M", Math.floor(num / 1000)) + intToRoman(num % 1000)
   }
