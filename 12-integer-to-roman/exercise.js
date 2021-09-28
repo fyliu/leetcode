@@ -28,6 +28,8 @@ const romanDigit = (digit, romanOneFiveTen) => {
 var intToRoman = function(num) {
   if(num < 100) {
     return romanDigit(Math.floor(num / 10), "XLC") + romanDigit(num % 10, "IVX")
+  } else if(num < 1000) {
+    return romanDigit(Math.floor(num / 100), "CDM") + romanDigit(Math.floor((num % 100) / 10), "XLC") + romanDigit(num % 10, "IVX")
 
   } else if(num < 400) {
     return repeatChar("C", Math.floor(num / 100)) + intToRoman(num % 100)
