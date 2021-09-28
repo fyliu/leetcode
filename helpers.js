@@ -22,4 +22,21 @@ const buildTree = (values) => {
   return root
 }
 
-module.exports = buildTree
+function ListNode(val, next) {
+  this.val = (val===undefined ? 0 : val)
+  this.next = (next===undefined ? null : next)
+}
+
+const buildList = (array) => {
+  let head = new ListNode(array[0])
+  let node = head
+  if(array.length > 1) {
+    for(let i = 1; i < array.length; i++) {
+      node.next = new ListNode(array[i])
+      node = node.next
+    }
+  }
+  return head
+}
+
+module.exports = {buildTree, buildList}
