@@ -9,5 +9,6 @@ describe('Test suite', () => {
   it('test Roman', () => {
     test(1, "I")
     test(2, "II")
+    test(3, "III")
   });
 });
