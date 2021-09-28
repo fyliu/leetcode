@@ -33,8 +33,10 @@ var intToRoman = function(num) {
     return "XL" + intToRoman(num % 10)
   } else if(num < 90) {
     return "L" + intToRoman(num - 50)
-  } else {
+  } else if(num < 100) {
     return "XC" + intToRoman(num - 90)
+  } else {
+    return "C" + intToRoman(num % 100)
   }
 };
 
