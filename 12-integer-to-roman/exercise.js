@@ -1,23 +1,7 @@
-const repeatI = (times) => {
+const repeatChar = (c, times) => {
   let string = ""
   for(let i = 0; i < times; i++) {
-    string += "I"
-  }
-  return string
-}
-
-const repeatX = (times) => {
-  let string = ""
-  for(let i = 0; i < times; i++) {
-    string += "X"
-  }
-  return string
-}
-
-const repeatC = (times) => {
-  let string = ""
-  for(let i = 0; i < times; i++) {
-    string += "C"
+    string += c
   }
   return string
 }
@@ -28,15 +12,15 @@ const repeatC = (times) => {
  */
 var intToRoman = function(num) {
   if(num < 4) {
-    return repeatI(num)
+    return repeatChar("I", num)
   } else if(num === 4) {
     return "IV"
   } else if(num >= 5 && num < 9) {
-    return "V" + repeatI(num - 5)
+    return "V" + repeatChar("I", num - 5)
   } else if(num === 9) {
     return "IX"
   } else if(num < 40) {
-    return repeatX(Math.floor(num / 10)) + intToRoman(num % 10)
+    return repeatChar("X", Math.floor(num / 10)) + intToRoman(num % 10)
   } else if(num < 50) {
     return "XL" + intToRoman(num % 10)
   } else if(num < 90) {
@@ -44,7 +28,7 @@ var intToRoman = function(num) {
   } else if(num < 100) {
     return "XC" + intToRoman(num - 90)
   } else {
-    return repeatC(Math.floor(num / 100)) + intToRoman(num % 100)
+    return repeatChar("C", Math.floor(num / 100)) + intToRoman(num % 100)
   }
 };
 
