@@ -1,10 +1,12 @@
 const assert = require('assert');
 const testFunction = require('./exercise');
 
+const test = (input, output) => {
+  assert.deepStrictEqual(testFunction(input), output);
+}
+
 describe('Test suite', () => {
-  it('1', () => {
-    const input = 1;
-    const output = "I";
-    assert.deepStrictEqual(testFunction(input), output);
+  it('test Roman', () => {
+    test(1, "I")
   });
 });
